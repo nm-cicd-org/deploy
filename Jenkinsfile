@@ -23,7 +23,7 @@ pipeline {
 			
 			steps{
 			
-				git url: "${GITHUB_DEPLOY_REPO_URL}", credentialsId: 'github-ssh-key', branch: 'main'
+				git url: "${GITHUB_DEPLOY_REPO_URL}", credentialsId: 'nm-ssh-jen', branch: 'main'
 				
 				sh "git config user.email pipeline@linkedin.com"
 				
@@ -33,7 +33,7 @@ pipeline {
 				
 				sh 'git commit -am "Updated image ${IMAGE_NAME} to ${VERSION}"'
 				
-				sshagent(["github-ssh-key"]){
+				sshagent(["nm-ssh-jen"]){
 				
 					sh "git push origin main"
 				
