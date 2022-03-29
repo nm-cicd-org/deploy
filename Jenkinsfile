@@ -1,4 +1,4 @@
-[200~			steps{
+			steps{
 			
 				git url: "${GITHUB_DEPLOY_REPO_URL}", credentialsId: 'nm-ssh-jen', branch: 'main'
 				
