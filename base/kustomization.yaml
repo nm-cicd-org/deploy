@@ -14,7 +14,7 @@ resources:
 images:
 - name: ghcr.io/nm-cicd-org/hotel-webapp
   newName: ghcr.io/nm-cicd-org/hotel-webapp
-  newTag: "2"
+  newTag: "3"
 - name: ghcr.io/nm-cicd-org/room-service
   newName: ghcr.io/nm-cicd-org/room-service
   newTag: "34"
