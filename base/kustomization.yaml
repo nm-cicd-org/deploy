@@ -11,3 +11,7 @@ resources:
 - hotel-webapp-service.yaml
 - room-deployment.yaml
 - room-service.yaml
+images:
+- name: ghcr.io/nm-cicd-org/room-service
+  newName: ghcr.io/nm-cicd-org/room-service
+  newTag: "28"
