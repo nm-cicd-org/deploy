@@ -14,4 +14,4 @@ resources:
 images:
 - name: ghcr.io/nm-cicd-org/room-service
   newName: ghcr.io/nm-cicd-org/room-service
-  newTag: "33"
+  newTag: "34"
