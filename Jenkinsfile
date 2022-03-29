@@ -1,3 +1,26 @@
+pipeline {
+
+	options{
+		disableConcurrentBuilds()
+		overrideIndexTriggers(false)
+	}
+	
+	agent any
+	
+	parameters{
+		string(name: "GITHUB_ORG")
+		string(name: "IMAGE_NAME")
+		string(name: "VERSION")
+	}
+	
+	environment{
+		GITHUB_DEPLOY_REPO_URL = "git@github.com:${GITHUB_ORG}/deploy.git"	
+	}
+		
+	stages{
+	
+		stage("Deploy to Staging"){
+			
 			steps{
 			
 				git url: "${GITHUB_DEPLOY_REPO_URL}", credentialsId: 'nm-ssh-jen', branch: 'main'
