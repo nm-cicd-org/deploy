@@ -46,7 +46,7 @@ pipeline {
 		stage("Deploy to Production"){
                         steps{
 			
-				git url: "${GITHUB_DEPLOY_REPO_URL}", credentialsId: 'github-ssh-key', branch: 'release'
+				git url: "${GITHUB_DEPLOY_REPO_URL}", credentialsId: 'nm-ssh-jen', branch: 'release'
 				
 				sh "git config user.email pipeline@linkedin.com"
 				
@@ -54,7 +54,7 @@ pipeline {
 								
 				sh 'git merge main'
 				
-				sshagent(["github-ssh-key"]){
+				sshagent(["nm-ssh-jen"]){
 				
 					sh "git push origin release"
 				
