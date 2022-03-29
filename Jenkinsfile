@@ -52,7 +52,7 @@ pipeline {
 				
 				sh "git config user.name pipeline"
 								
-				sh 'git merge main'
+				sh 'git merge main --allow-unrelated-histories'
 				
 				sshagent(["nm-ssh-jen"]){
 				
