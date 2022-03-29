@@ -53,7 +53,7 @@ pipeline {
 				
 				sh "git config user.name pipeline"
 								
-				sh 'git merge main'
+				sh "git merge main"
 				
 				sshagent(["nm-ssh-jen"]){
 				
